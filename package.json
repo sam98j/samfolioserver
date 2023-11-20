@@ -5,22 +5,33 @@
   "main": "./app.ts",
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon",
-    "dev:bun": "bun ./app.ts"
+    "dev": "npm run tailwind:css && nodemon",
+    "dev:bun": "bun ./app.ts",
+    "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "dependencies": {
+    "autoprefixer": "^10.4.16",
+    "awilix": "^9.0.0",
+    "awilix-express": "^8.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.3.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "i18n": "^0.15.1",
+    "mongoose": "^8.0.0",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "pug": "2.0.0-beta11",
+    "tailwindcss": "^3.3.5"
   },
   "devDependencies": {
     "@eslint/create-config": "0.4.6",
     "@types/cookie-parser": "^1.4.5",
     "@types/express": "^4.17.20",
     "@types/http-errors": "^2.0.3",
+    "@types/i18n": "^0.13.8",
     "@types/morgan": "^1.9.7",
     "@types/node": "^20.8.10",
     "@typescript-eslint/eslint-plugin": "latest",

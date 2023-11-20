@@ -1,0 +1,11 @@
+{
+	"Hello": "Hello",
+	"Hello we need more %s pepole": {
+		"one": "Hello we need more %s pepole",
+		"other": "Hello we need more %s pepole"
+	},
+	"hello we need more %s pepole": {
+		"one": "hello we need more %s pepole",
+		"other": "hello we need more %s pepole"
+	}
+}

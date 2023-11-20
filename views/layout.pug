@@ -3,5 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+  body(class='px-20 py-10')
+    include nav.pug
     block content
+    script(src="/javascripts/app.js")

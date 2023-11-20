@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- container
+  div(class='h-[calc(100dvh-2.5rem)] flex items-center justify-center')
+   form(action="/projects/add" method='POST' class='form-container p-10 shadow-main rounded-xl flex flex-col gap-5')
+     h1(class='text-center text-gray-700') Login to Admin Panel
+     //- input container
+     div(class='input-container flex flex-col')
+       label(for="email" class='text-gray-400') email
+       //- text input
+       input(type="email" id='email' name='email' value='hosam98j@gmail.com' class='shadow-main rounded-md px-2') 
+     //- input container
+     div(class='input-container flex flex-col')
+       label(for="password" class='text-gray-400') password 
+       //- text input
+       input(type="password" id='password' name='password' value='password' class='shadow-main rounded-md px-2')
+     //- input container
+     div(class='input-container')
+       //- text input
+       button(class='bg-blue-500 text-white rounded-xl py-1 px-5') login
