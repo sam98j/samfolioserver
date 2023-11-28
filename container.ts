@@ -1,7 +1,6 @@
 import * as awilix from 'awilix';
 import { scopePerRequest } from 'awilix-express';
 import { Application } from 'express';
-import { HomeService } from './services/homeService';
 import { ProjectsModel } from './models/projects';
 import { ProjectService } from './services/projects';
 import { HeroSectionService } from './services/heroSection';
@@ -13,8 +12,6 @@ import { multerConfig } from './configs/multer';
 
 export const loadContainer = (app: Application) => {
   const Container = awilix.createContainer({ injectionMode: 'CLASSIC' });
-  // regester home service
-  Container.register({ homeService: awilix.asClass(HomeService).scoped() });
   Container.register({
     projectService: awilix.asClass(ProjectService).scoped(),
   });

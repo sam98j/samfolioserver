@@ -11,8 +11,9 @@ class AboutMeController {
   @GET()
   async aboutMeHandler(req: Request, res: Response) {
     try {
+      // get about me data from the database
       const aboutMeData = await this.aboutMeService.getAboutMeSection();
-      console.log(aboutMeData);
+      // send the data to the clinet
       res.send(aboutMeData);
     } catch (error) {
       res.status(500).send(error);

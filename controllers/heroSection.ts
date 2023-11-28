@@ -6,15 +6,18 @@ import { HeroSectionService } from '../services/heroSection';
 @route('/hero_section')
 class HeroSectionController {
   // constructor
-  constructor(private readonly heroSectionService: HeroSectionService){}
+  constructor(private readonly heroSectionService: HeroSectionService) {}
   // home route handler
   @GET()
-  async heroSectionHandler(req: Request, res: Response){
+  async heroSectionHandler(req: Request, res: Response) {
     try {
-      const heroSectionData = await this.heroSectionService.getHeroSection();  
-      console.log(heroSectionData);
+      // get heroSection data from the clinet
+      const heroSectionData = await this.heroSectionService.getHeroSection();
+      // send the heroSection data to the clinet
       res.send(heroSectionData);
-    } catch (error) {res.status(500).send(error);}
+    } catch (error) {
+      res.status(500).send(error);
+    }
   }
 }
 
