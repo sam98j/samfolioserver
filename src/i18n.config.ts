@@ -5,11 +5,11 @@ i18n.configure({
   locales: ['en', 'ar'],
   defaultLocale: 'ar',
   queryParameter: 'lang',
-  directory: path.join('./', 'locales'),
+  directory: path.join('../', 'locales'),
   api: {
-    '__': 'translate',
-    '__n': 'translateN'
-  }
+    __: 'translate',
+    __n: 'translateN',
+  },
 });
 
 export default i18n;
