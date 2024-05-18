@@ -2,11 +2,12 @@
   "name": "portfolio-server",
   "version": "0.0.0",
   "private": true,
-  "main": "./app.ts",
+  "main": "./src/app.ts",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./dist/app.js",
     "dev": "nodemon",
-    "dev:bun": "bun ./app.ts",
+    "dev:bun": "bun ./src/app.ts",
+    "build": "tsc --build",
     "tailwind:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css"
   },
   "dependencies": {
